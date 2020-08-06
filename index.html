@@ -1,35 +1,79 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="Guardar_Registro.java">
+        <link rel="stylesheet" href="acciones_alumno.java">
+        <link rel="stylesheet" href="Consultar_Lista.java">
+        <link rel="stylesheet" href="Eliminar_datos.java">
+        <link rel="stylesheet" href="Alumno.java">
         <title>Registro Alumnos</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://bootswatch.com/4/litera/bootstrap.min.css">
+        <link rel="stylesheet" href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
     </head>
+
+    <style>
+        a{
+            font-family: 'Noto Sans JP', sans-serif;
+            font-size: 200%;
+		}
+    </style>
+
     <body>
-        <div>
-            
-            <h1>Registro de alumno</h1>
-            <br>
-            <form method="post" action="Guardar_Registro" name="formulario" >
-                <table border="1" >
-                    <tr> <td> Nombre:</td><td><input type="text" name="nombre"></td></tr>
-                     <tr> <td> Password:</td><td><input type="password" name="password"></td></tr>
-                      <tr> <td> Email:</td><td><input type="email" name="email"></td></tr>
-                              <tr> <td>Pais:</td><td>
-                                      <select name="pais" style="width: 150px">
-                                          <option>India</option>
-                                          <option>Mexico</option>
-                                          <option>Al que nadie quiere</option>
-                                          <option>por ahi</option>
-                                      </select>
-                          </td></tr>
-                              <tr><td colspan="2"> <input type="submit" value="Guardar Registro"></td></tr>
-                </table> 
-            </form>
-        </div>
         
-        <div>
-            <a href="Consultar_Lista">Consultar lista de alumnos</a>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+                <a href="" class="navbar-brand">
+                    <h1>Registro de alumno</h1> 
+                </a>
+            </nav> 
+
+            <br>
+
+            <div class="container">
+                <div class="row pt-5">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4>Agrega un registro</h4>
+                            </div>
+                                <form method="post" action="Guardar_Registro" name="formulario" class="card-body">
+                                    <div class = "form-group">
+                                        <input type="text" name="nombre" placeholder="Nombre" class="form-control">
+                                    </div>
+
+                                    <div class = "form-group">
+                                        <input type="password" name="password" placeholder="password" class="form-control">
+                                    </div> 
+                    
+                                    <div class = "form-group">
+                                        <label for = "exampleSelect1"> <font style = "vertical-alinear: heredar;"> <font style = "vertical-align: heredar;"> Pais </font> </font> </label>
+                                            <select name="pais" class = "form-control" id = "exampleSelect1">
+                                                <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> India </font> </font> </option>
+                                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Mexico </font> </font> </option>
+                                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Estados Unidos </font> </font> </option>
+                                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heritage;"> Canada </font> </font> </option>
+                                                    <option> <font style = "vertical-align: heredar;"> <font style = "vertical-align: heredar;"> Chile </font> </font> </option>
+                                            </select>
+                                    </div>
+
+                                    <div class = "form-group">
+                                        <input type="email" name="email" placeholder="email" class="form-control">
+                                    </div>   
+                                        <input type="submit" value="Guardar Registro" class="btn btn-primary btn-block"></td></tr>
+                                </form>
+                            </div>
+                        </div>        
+                    </div>
+                </div>    
+            </div>
+        <br>
+        <div class="card-header">
+            <a href="Consultar_Lista" class="container">Consultar lista de alumnos</a>
         </div>
         
     </body>
